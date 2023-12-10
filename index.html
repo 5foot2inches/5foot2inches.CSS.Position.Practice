@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Resources/css/style.css" type="text/css" rel="stylesheet">
+    <title>CSS CheatSheet</title>
+</head>
+<body>
+   <!--Header --> 
+   <header>
+    <h1>Hello World!</h1>
+   </header>
+
+   <!-- Introduction to default postions-->
+   <div class="Introduction">
+   <h2>Exploration of block-level elements and their default postion.</h2>
+   <p> Here we will talk about how block-level elements can create a block that fills<br> 
+    the entire width of their parent elements, and they prevent other elements from <br>
+    appearing in the same horizontal space. <br>
+    The default position can be changed by setting its position property:
+   </p>
+   <br>
+   <ul class="position">
+    <li><a href="#static-default">Static-Default Value</a></li>
+    <li><a href="#relative">Relative Value</a></li>
+    <li><a href="#absolute">Absolute Value</a></li>
+    <li><a href="#fixed">Fixed Value</a></li>
+    <li><a href="#sticky">Sticky Value</a></li>
+   </ul>
+</div>
+<br>
+
+
+<!--Static-default value-->
+<div id="static-default"> 
+    <h2>Static Default Value </h2>
+    <p>With the static default value, the block level element creates a block the 
+        full <strong>width</strong> of the parent element, and prevents other elements 
+        from appearing in the same horizontal space. 
+
+        block -level elements also appear on the left side if the browser.
+        CSS syntax code used for default:
+    </p>
+    <pre>
+        .default_rectangle {
+             color: bisque;
+            background-color: coral;
+        }
+        </pre>
+    <div class="default_rectangle">
+        <p>This is Default</p>
+    </div>
+</div>
+<br>
+
+
+<!--Relative-->
+<div id="relative">
+    <h2>Relative Value</h2>
+    <p>Using the relative value, will allow you to position an element relative to
+        it's default static position.
+        This can not just be done by simply putting the position status equal to relative. 
+        In order to do this it needs to be accompanied by an offset propety so we know how
+        to we will make the position relative. 
+        There are 4 properties we can choose from to offset the element with:
+    </p>
+    <ul id="offset"> 
+        <li><strong>Offset variables</strong></li>
+        <li><strong>Top</strong>: This moves the element down from the top</li>
+        <li><strong>Bottom</strong>: This moves the element up from the bottom</li>
+        <li><strong>Left</strong>: moves elements away from the left.</li>
+        <li><strong>Right</strong>: moves elements away from the right.</li>
+    </ul>
+    <p> Looking at the offset properties, the name describes as to where you want to move 
+        it away from. If only we could make it as simple when it comes to life and we could 
+        make our offset value equal to parents. 
+
+        So, how to practice writing the syntax within css for this relative value:
+        ex: <br><br></p>
+     <pre>
+
+        .relative_rectangle {
+            background-color: blanchedalmond;
+            color: green;
+            position: relative;
+            top: 50px;
+            left: 120px;
+        }
+    </pre>
+        below you will see how this code looks in comparison to the default.
+    
+    <div class="default_rectangle">
+        <p>This is Default</p>
+    </div>
+    <div class="relative_rectangle">
+        <p>This is Relative and it is moved from the top by 50px, and moved from the left with 120px.</p>
+    </div>
+   
+<br>
+
+<!--absolute-->
+<div id="absolute">
+    <h2>This is Absolute Value</h2>
+    <p>With the absolute value it will ignore elements and act as if it isn't present
+        on the page. The element within the absolute position will be relative to its closest 
+        parent element. When a person scrolls, the element will scroll with the rest of the
+        document when a user scrolls.
+
+        let me also introduce you to the concept of <strong>z-index</strong><br> 
+        for this code I used the z-index controls how far back or forward an element is
+        on the page. with a z-index of 1 it moves the element forward;<br>
+        whereas 0 pushes it back.
+         </p>
+       <br>
+       <p>
+        The code I used for absolute value: </p> 
+    <pre> .absolute_rectangle {
+                background-color: greenyellow;
+                color: blue;
+                position: absolute;
+                top: 62%;
+                left: 29%;
+                transform: translate(-50%, -50%);
+                z-index: 1; /* Adjust this value if needed */
+            
+            }
+        </pre>
+        
+    <div class="absolute_rectangle">
+        <p><br><br>This is Absolute<br><br> </p>
+    </div>
+    <a href="https://static.wikia.nocookie.net/disney/images/d/d5/Profile_-_Mike_Wazowski.jpg"
+    target="_blank">
+    <img src="https://static.wikia.nocookie.net/disney/images/d/d5/Profile_-_Mike_Wazowski.jpg"
+        alt="mike" />
+</a>
+
+</div>
+<br>
+<br>
+
+<!--fixed-->
+<div id="fixed">
+    <h2>Fixed Value</h2>
+    <p>The fixed element can set an element to a specific positon on the page.
+        this is good for setting the positon and that it does not scroll with the document
+        such as with the absolute value. This also is accompanied with the same <a href="#offset">offset values</a> 
+        as with relative
+    </p>
+    <p>CSS syntax I used for this example:<br></p>
+    <pre>
+        .fixed_rectangle {
+    background-color: gold;
+    color: black;
+    position:fixed;
+    bottom: 70px;
+    top: 580px;
+}
+</pre>
+
+    <div class="fixed_rectangle">
+        <p>This is Fixed</p>
+    </div>
+</div>
+<br>
+<br>
+
+<!--sticky-->
+<div id="sticky">
+    <h2>Sticky Value</h2>
+    <p>With sticky position value that keeps an element in the document flow as the user 
+        scrolls, but sticks to a specific position. When we use the sticky value we will also 
+        be using the familiar <a href="#offset">offset values</a>. 
+    </p>
+    <p>CSS Syntax used for this example<br>
+    <pre>
+        .sticky_rectangle {
+            background-color: darkorange;
+            color: white;
+            position: sticky;
+            bottom: 20px;
+        }
+    </pre>
+        </p>
+    <div class="sticky_rectangle">
+        <p>This is Sticky </p>
+        
+    </div>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+</body>
+</html>
