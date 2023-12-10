@@ -1,0 +1,132 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: olive;
+    position: relative;
+   
+}
+#offset{
+    color: darkgreen;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+   
+}
+.Introduction{
+    color: blanchedalmond;
+ 
+
+}
+
+.Introduction p{
+    color: bisque;
+    font-size: 20px;
+    text-align: center;
+   
+    
+}
+
+
+.position{
+    color: darkgreen;
+    background-color: darkkhaki;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+/* default section*/
+#static_default{
+    font-size: 20px;
+}
+.default_rectangle {
+    color: bisque;
+    background-color: coral;
+}
+
+/* relative section*/
+#relative{
+    font-size: 20px;
+    color: bisque;
+}
+
+.relative_rectangle {
+    background-color: blanchedalmond;
+    color: green;
+    position: relative;
+    top: 50px;
+    left: 120px;
+}
+
+/* absolute section*/
+#absolute{
+   font-size: 20px;
+}
+.absolute_rectangle {
+    background-color: greenyellow;
+    color: blue;
+    position: absolute;
+    top: 62%;
+    left: 29%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Adjust this value if needed */
+
+}
+
+/* fixed section*/
+#fixed{
+    font-size: 20px;
+   
+}
+.fixed_rectangle {
+    background-color: gold;
+    color: black;
+    position:fixed;
+    bottom: 70px;
+    top: 580px;
+}
+
+/* sticky section*/
+#sticky{
+    font: size 20px;
+}
+.sticky_rectangle {
+    background-color: darkorange;
+    color: white;
+    position: sticky;
+    bottom: 20px;
+}
+
+
+/* body section*/
+h1{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 80px;
+
+    
+}
+
+h2{
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: darkkhaki;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: darkgreen;
+    line-height: 2;
+  
+}
+
+pre{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    display: block;
+    width: 500px;
+    height: 250px;
+}
+
